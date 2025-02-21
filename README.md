@@ -1,4 +1,4 @@
-This app may be deployed locally or check it our at https://fitness-planner-y0xu.onrender.com/. (May take a min to load since the Flask App runs on Render Free Plan)
+This app may be deployed locally or check it out at https://fitness-planner-y0xu.onrender.com/. (May take a min to load since the Flask App runs on Render Free Plan)
 
 # Fitness Planner
 #### Description:
