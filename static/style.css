@@ -1,0 +1,327 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 50px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    color: #DCA323;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background: linear-gradient(45deg, #1A1D2E, #273A6E, #3E5C84, #4A6B8C);
+    background-size: 400% 400%;
+    animation: gradientBackground 10s ease infinite;
+    padding-bottom: 80px;
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding-top: 40px;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    background-color: #333;
+    padding: 10px 20px;
+    border-radius: 8px;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.navbar li {
+    display: inline;
+    margin: 0 15px;
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.navbar a:hover {
+    color: #b5a37f;
+}
+
+#content {
+    padding-bottom: 80px;
+}
+
+@keyframes gradientBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+h1 {
+    margin: 10px 0;
+}
+
+#workout-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input, button, select {
+    padding: 8px;
+    margin: 5px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button.delete-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    margin-left: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+#workout-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    margin: 20px 0;
+    gap: 20px;
+    flex-direction: row;
+}
+
+#workout-list li {
+    background-color: #1A1D2E;
+    color: #EF9D04;
+    font-size: 1.2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 200px;
+    width: 300px;
+    overflow: hidden;
+}
+
+.workout-name {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.workout-category {
+    font-style: italic;
+    color: #DCA323;
+}
+
+.workout-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.workout-sets, .workout-reps {
+    background-color: #273A6E;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+h2 {
+    margin: 10px 0;
+}
+
+#header {
+    background-color: #DCA323;
+    color: #235CDC;
+    padding: 20px 30px;
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    border-bottom: 4px solid #235CDC;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #235CDC;
+    color: #DCA323;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+#workout-info {
+    background-color: #1A1D2E;
+    color: #EF9D04;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 1.2em;
+    margin-bottom: 80px;
+}
+
+#workout-info ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0 0 0;
+}
+
+#workout-info li {
+    margin-bottom: 10px;
+    font-size: 1em;
+    color: #DCA323;
+}
+
+#workout-info li.bodyweight {
+    color: #FF6347;
+}
+
+#workout-info li.strength {
+    color: #32CD32;
+}
+
+#workout-info li.cardio {
+    color: #1E90FF;
+}
+
+#workout-info li.core {
+    color: #FFD700;
+}
+
+#bmi-calculator {
+    background-color: #1A1D2E;
+    color: #EF9D04;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-top: 20px;
+}
+
+#bmi-calculator input, #bmi-calculator select {
+    padding: 8px;
+    margin: 5px;
+    width: 200px;
+}
+
+#bmi-calculator button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#bmi-calculator button:hover {
+    background-color: #45a049;
+}
+
+#result {
+    margin-top: 20px;
+}
+
+#video-course-section {
+    padding: 60px 20px;
+    background-color: #1A1D2E;
+    color: #EF9D04;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 80px;
+    position: relative; /* Ensure the arrows are positioned relative to this container */
+}
+
+#video-course-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#video-course-section .video-container {
+    margin: 20px auto;
+    position: relative;
+    display: none;
+}
+
+#video-course-section iframe {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#video-course-section p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+#video-course-section a {
+    color: #EF9D04;
+    text-decoration: none;
+}
+
+#video-course-section a:hover {
+    text-decoration: underline;
+}
+
+.scroll-arrows {
+    position: absolute;
+    top: 15%; /* Adjust the position higher */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.scroll-left,
+.scroll-right {
+    background-color: transparent;
+    border: 2px solid #EF9D04;
+    padding: 15px;
+    font-size: 2.5em;
+    color: #EF9D04;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.scroll-left:hover,
+.scroll-right:hover {
+    background-color: #EF9D04;
+    color: #1A1D2E;
+    transform: scale(1.2);
+}
+
+.scroll-left {
+    margin-left: 10px;
+}
+
+.scroll-right {
+    margin-right: 10px;
+}
